@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: fake-backend:v1
-          imagePullPolicy: Never
+          image: ravenveles/backend:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
