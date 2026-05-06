@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const API_URL = "/api/tasks";
+const API_URL = "http://backend-service/tasks";
 
 const MOCK_DATA = [
   {
