@@ -3,7 +3,7 @@ name: CI/CD Pipeline for GitOps
 on:
   push:
     branches:
-      - main
+      - master
     paths-ignore:
       - 'k8s/**'
 
