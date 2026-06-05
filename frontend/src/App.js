@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const API_URL = "http://backend-service/tasks";
+const API_URL = "/tasks";
 
 const MOCK_DATA = [
   {
@@ -69,8 +69,8 @@ function App() {
         DueDate: dueDate,
         Status: status
       };
-      
-      setTasks([...Tasks, newTask]);
+      const response = await axios.post(API_URL, newTask);
+      setTasks([...Tasks, response.data]);
       resetForm();
     } catch (err) {
       setError("Không thể thêm task!");
@@ -83,8 +83,15 @@ function App() {
     if (!name.trim() || !editTaskID) return;
     try {
       setLoading(true);
+      const updatedTask = {
+        Name: name,
+        Description: description,
+        DueDate: dueDate,
+        Status: status
+      };
+      const response = await axios.put(`${API_URL}/${editTaskID}`, updatedTask);
       const updatedTasks = Tasks.map(task =>
-        task.ID === editTaskID ? { ...task, Name: name, Description: description, DueDate: dueDate, Status: status } : task
+        task.ID === editTaskID ? response.data : task
       );
       setTasks(updatedTasks);
       resetForm();
