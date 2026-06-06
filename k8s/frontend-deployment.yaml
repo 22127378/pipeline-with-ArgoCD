@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ravenveles/frontend:v1
+          image: ravenveles/frontend:1a1221cdcab6f2ec95ade1ad3212154281ffc3cb
           imagePullPolicy: Always
           ports:
             - containerPort: 80
