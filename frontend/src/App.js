@@ -7,7 +7,7 @@ const API_URL = "/tasks";
 const MOCK_DATA = [
   {
     ID: 1,
-    Name: "Frontend React ",
+    Name: "Frontend React-v2(Test GitOps Flow)",
     Description: "Done UI for Task App using Bootstrap 5",
     DueDate: "2024-05-20T00:00:00.000Z",
     Status: "Completed"
@@ -161,7 +161,7 @@ function App() {
           <div className="card-header bg-primary text-white">
             <h2 className="mb-0 h4">Quản lý công việc</h2>
           </div>
-          
+
           <div className="card-body">
             <form onSubmit={handleSubmit} className="mb-4">
               <div className="row g-3">
