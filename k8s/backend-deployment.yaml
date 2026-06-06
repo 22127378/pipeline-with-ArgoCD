@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ravenveles/backend:1a1221cdcab6f2ec95ade1ad3212154281ffc3cb
+          image: ravenveles/backend:39c36be2f19ef3ef8161c3ced441e4662228390d
           imagePullPolicy: Always
           ports:
             - containerPort: 80
